@@ -2,7 +2,7 @@ def turn_count (board)
   turns = 0;
 
   board.each do |spot|
-    if spot == "X" || spot == "O"
+    if spot = "X" || spot == "O"
       turns += 1
     end
   end
@@ -10,8 +10,8 @@ def turn_count (board)
 end
 
 def current_player (board)
-  if turn_count(board) % 2 == 0
-    return "X"
+  if turn_count % 2 == 0
+    return X
   end
   return "O"
 end
